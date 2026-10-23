@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f5efe4"/>
+  <rect x="24" y="24" width="1232" height="672" rx="28" fill="#fffaf0" stroke="#d5c19f" stroke-width="4"/>
+  <text x="640" y="80" text-anchor="middle" font-size="34" font-family="Microsoft YaHei, Arial" fill="#5d4733" font-weight="700">项目全局规则沉淀流程</text>
+
+  <g font-family="Microsoft YaHei, Arial">
+    <rect x="90" y="170" width="250" height="110" rx="20" fill="#f0bc63" stroke="#a3753e" stroke-width="3"/>
+    <text x="215" y="218" text-anchor="middle" font-size="24" fill="#ffffff" font-weight="700">提出“全局规则”意图</text>
+    <text x="215" y="250" text-anchor="middle" font-size="17" fill="#ffffff">或表达类似含义</text>
+
+    <rect x="390" y="170" width="250" height="110" rx="20" fill="#68c7c3" stroke="#417b78" stroke-width="3"/>
+    <text x="515" y="218" text-anchor="middle" font-size="24" fill="#ffffff" font-weight="700">AI 先分析</text>
+    <text x="515" y="250" text-anchor="middle" font-size="17" fill="#ffffff">是否与当前业务强相关</text>
+
+    <rect x="690" y="170" width="250" height="110" rx="20" fill="#7ec95d" stroke="#4f7d3d" stroke-width="3"/>
+    <text x="815" y="218" text-anchor="middle" font-size="24" fill="#ffffff" font-weight="700">提炼候选规则</text>
+    <text x="815" y="250" text-anchor="middle" font-size="17" fill="#ffffff">转成可执行 Do / Don't</text>
+
+    <rect x="990" y="170" width="210" height="110" rx="20" fill="#70a0f1" stroke="#486997" stroke-width="3"/>
+    <text x="1095" y="218" text-anchor="middle" font-size="24" fill="#ffffff" font-weight="700">用户确认</text>
+    <text x="1095" y="250" text-anchor="middle" font-size="17" fill="#ffffff">是否适合沉淀</text>
+
+    <rect x="390" y="430" width="500" height="120" rx="24" fill="#d59ce8" stroke="#8a6296" stroke-width="3"/>
+    <text x="640" y="485" text-anchor="middle" font-size="26" fill="#ffffff" font-weight="700">AI 直接追加到 prompt.txt</text>
+    <text x="640" y="520" text-anchor="middle" font-size="18" fill="#ffffff">不再重复确认“是否要改 prompt”</text>
+
+    <line x1="340" y1="225" x2="390" y2="225" stroke="#8a6a49" stroke-width="8"/>
+    <polygon points="390,225 368,213 368,237" fill="#8a6a49"/>
+    <line x1="640" y1="225" x2="690" y2="225" stroke="#8a6a49" stroke-width="8"/>
+    <polygon points="690,225 668,213 668,237" fill="#8a6a49"/>
+    <line x1="940" y1="225" x2="990" y2="225" stroke="#8a6a49" stroke-width="8"/>
+    <polygon points="990,225 968,213 968,237" fill="#8a6a49"/>
+
+    <line x1="1095" y1="280" x2="1095" y2="350" stroke="#8a6a49" stroke-width="8"/>
+    <line x1="1095" y1="350" x2="640" y2="350" stroke="#8a6a49" stroke-width="8"/>
+    <line x1="640" y1="350" x2="640" y2="430" stroke="#8a6a49" stroke-width="8"/>
+    <polygon points="640,430 628,408 652,408" fill="#8a6a49"/>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Unity 系统养成开发"
+  short_description: "设计、实现、调试和验证 Unity 局外养成与经济系统"
+  default_prompt: "使用 $develop-unity-progression-systems，设计、实现并验证这个 Unity 局外养成功能；涉及配置表时结合 $develop-unity-config-tables，涉及战斗属性快照时结合 $develop-unity-ecs-battle。"
+
+policy:
+  allow_implicit_invocation: true

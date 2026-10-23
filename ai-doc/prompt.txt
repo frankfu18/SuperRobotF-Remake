@@ -10,7 +10,7 @@
 5. 基础系统管理器：`SystemManager`，已内置系统顺序：
    - `AssetSystem`、`TimeSystem`、`PlayerPrefsSystem`、`AudioSystem`、`ModuleSystem`、`HttpSystem`
 6. 热更入口：`HotUpdateSystem.LoadHotUpdateAssembly()` 反射调用 `HotUpdateMain.Run/Login/Logout`。
-7. 业务代码主落位在 `Assets/HotUpdate`；框架核心在 `Assets/PeekabooGame/Framework`；通用宿主系统在 `Assets/Scripts`。
+7. 业务代码主落位在 `Assets/HotUpdate`；框架核心在 `Assets/FrankGame/Framework`；通用宿主系统在 `Assets/Scripts`。
 
 【目录职责（新增代码必须按此落位）】
 1. `Assets/HotUpdate/Game/Modules`：业务模块（继承 `ModuleBase<T>`）。
@@ -20,7 +20,7 @@
 5. `Assets/HotUpdate/DataBase/DataModel`：本地数据库业务 Root 模型（`IDataRoot`）。
 6. `Assets/Scripts/Database`：Database 核心组件（Bootstrap/Engine/Store/Serialization）。
 7. `Assets/Scripts/System/Logic`：宿主级系统能力扩展（仅在确有必要时修改）。
-8. `Assets/PeekabooGame/Framework`：框架层（谨慎改动，优先不动）。
+8. `Assets/FrankGame/Framework`：框架层（谨慎改动，优先不动）。
 
 【已支持能力（优先复用，不重复造轮子）】
 1. 资源加载与卸载：`AssetSystem` + `AssetManager` + `BundleManager`。
@@ -35,10 +35,10 @@
 10. 本地数据库：`DatabaseBootstrap` + `DatabaseHelper` + `DatabaseEngine` + `TransactionalFileStore` 体系。
 11. 多语言：`LocalizationManager`（包内文本）+ `LanguageSystem/ConfigSystem`（业务语言表）。
 12. UI脚本自动生成工具：基于 `UIFieldCfg` 命名规则生成 `*.AutoGen.cs`。
-13. 编辑器打包工具：`PeekabooGame/打包/*` 菜单（资源、配置、DLL、索引、拷贝StreamingAssets）。
+13. 编辑器打包工具：`FrankGame/打包/*` 菜单（资源、配置、DLL、索引、拷贝StreamingAssets）。
 
 【配置与资源关键约束】
-1. 全局配置来自 `Assets/Resources/PeekabooGame/*.asset`（`SingleScriptableObject<T>`加载）。
+1. 全局配置来自 `Assets/Resources/FrankGame/*.asset`（`SingleScriptableObject<T>`加载）。
 2. 路径约定：
    - 本地资源根：`GameConfig.Path.LocalResRoot`（默认 `Assets/Res/`）
    - 表路径：`GameConfig.Table.LocalTablePath`（默认 `Assets/Res/config/`）
@@ -248,7 +248,7 @@
    - `LocalizationManager` 优先读取本地缓存（PlayerPrefs），再设置当前语言。
 
 3. 启动文案来源与调用
-   - 文案来源：`Assets/Resources/PeekabooGame/PackageLocalizationTable.xml`。
+   - 文案来源：`Assets/Resources/FrankGame/PackageLocalizationTable.xml`。
    - 启动流程文案统一通过 `LocalizationManager.GetPackageLanguageText(key, ...)` 获取。
    - 典型调用点：`CheckVersionProcedure / CheckPackageAssetsProcedure / CheckHotfixProcedure / ResolveAssetsProcedure`。
 

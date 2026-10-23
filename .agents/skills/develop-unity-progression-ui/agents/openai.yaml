@@ -1,0 +1,7 @@
+interface:
+  display_name: "Unity 养成 UI 逻辑开发"
+  short_description: "实现养成界面逻辑、模块交互、事件刷新与 Prefab 协作"
+  default_prompt: "使用 $develop-unity-progression-ui，基于已拼好的 Prefab 实现养成界面、Module 交互、事件刷新和验证。"
+
+policy:
+  allow_implicit_invocation: true

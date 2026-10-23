@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="780" viewBox="0 0 1440 780">
+  <rect width="1440" height="780" fill="#f6efe4"/>
+  <rect x="28" y="28" width="1384" height="724" rx="30" fill="#fffaf0" stroke="#d6c19e" stroke-width="4"/>
+  <text x="720" y="86" text-anchor="middle" font-size="36" font-family="Microsoft YaHei, Arial" fill="#5b4632" font-weight="700">开发方案协作流程</text>
+  <text x="720" y="122" text-anchor="middle" font-size="19" font-family="Microsoft YaHei, Arial" fill="#9a7858">需求整理完成后，先产出开发方案，再多轮确认，最后进入编码</text>
+
+  <g font-family="Microsoft YaHei, Arial">
+    <rect x="80" y="190" width="260" height="110" rx="20" fill="#67c8c3" stroke="#427b78" stroke-width="3"/>
+    <text x="210" y="236" text-anchor="middle" font-size="25" fill="#ffffff" font-weight="700">需求已整理完成</text>
+    <text x="210" y="268" text-anchor="middle" font-size="17" fill="#ffffff">规则、文档、草图已基本可用</text>
+
+    <rect x="400" y="190" width="270" height="110" rx="20" fill="#f0be66" stroke="#a67740" stroke-width="3"/>
+    <text x="535" y="236" text-anchor="middle" font-size="25" fill="#ffffff" font-weight="700">AI 分析归属层</text>
+    <text x="535" y="268" text-anchor="middle" font-size="17" fill="#ffffff">Module / Panel / Editor / Config</text>
+
+    <rect x="730" y="190" width="290" height="110" rx="20" fill="#7ec95d" stroke="#4f7d3d" stroke-width="3"/>
+    <text x="875" y="236" text-anchor="middle" font-size="25" fill="#ffffff" font-weight="700">产出开发方案文档</text>
+    <text x="875" y="268" text-anchor="middle" font-size="17" fill="#ffffff">参考 demo-game-setup.md，输出 md + svg</text>
+
+    <rect x="1080" y="190" width="260" height="110" rx="20" fill="#70a0f1" stroke="#486997" stroke-width="3"/>
+    <text x="1210" y="236" text-anchor="middle" font-size="25" fill="#ffffff" font-weight="700">保存到 develop-setup</text>
+    <text x="1210" y="268" text-anchor="middle" font-size="17" fill="#ffffff">开发方案文档与示意图统一落地</text>
+
+    <rect x="280" y="480" width="300" height="120" rx="22" fill="#d59ce8" stroke="#8a6396" stroke-width="3"/>
+    <text x="430" y="532" text-anchor="middle" font-size="26" fill="#ffffff" font-weight="700">多轮沟通确认</text>
+    <text x="430" y="568" text-anchor="middle" font-size="18" fill="#ffffff">开发人员和 AI 反复收口方案细节</text>
+
+    <rect x="730" y="480" width="420" height="120" rx="22" fill="#e48686" stroke="#995858" stroke-width="3"/>
+    <text x="940" y="532" text-anchor="middle" font-size="26" fill="#ffffff" font-weight="700">确认没问题后再进入编码</text>
+    <text x="940" y="568" text-anchor="middle" font-size="18" fill="#ffffff">显示对象清单、代码实现、联调验证</text>
+
+    <line x1="340" y1="245" x2="400" y2="245" stroke="#8a6a49" stroke-width="8"/>
+    <polygon points="400,245 378,233 378,257" fill="#8a6a49"/>
+    <line x1="670" y1="245" x2="730" y2="245" stroke="#8a6a49" stroke-width="8"/>
+    <polygon points="730,245 708,233 708,257" fill="#8a6a49"/>
+    <line x1="1020" y1="245" x2="1080" y2="245" stroke="#8a6a49" stroke-width="8"/>
+    <polygon points="1080,245 1058,233 1058,257" fill="#8a6a49"/>
+
+    <line x1="1210" y1="300" x2="1210" y2="370" stroke="#8a6a49" stroke-width="8"/>
+    <line x1="1210" y1="370" x2="430" y2="370" stroke="#8a6a49" stroke-width="8"/>
+    <line x1="430" y1="370" x2="430" y2="480" stroke="#8a6a49" stroke-width="8"/>
+    <polygon points="430,480 418,458 442,458" fill="#8a6a49"/>
+
+    <line x1="580" y1="540" x2="730" y2="540" stroke="#8a6a49" stroke-width="8"/>
+    <polygon points="730,540 708,528 708,552" fill="#8a6a49"/>
+
+    <text x="720" y="676" text-anchor="middle" font-size="20" fill="#6d543d">原则：需求落清后，先做开发方案，不直接跳过方案阶段进入编码。</text>
+  </g>
+</svg>

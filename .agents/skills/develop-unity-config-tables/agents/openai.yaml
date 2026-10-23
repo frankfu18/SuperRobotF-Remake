@@ -1,0 +1,7 @@
+interface:
+  display_name: "Unity 配置表开发"
+  short_description: "设计、修改、生成并完整验证 Unity 项目的配置表数据"
+  default_prompt: "使用 $develop-unity-config-tables，根据策划需求设计、修改、生成并验证 Unity 项目的配置表。"
+
+policy:
+  allow_implicit_invocation: true

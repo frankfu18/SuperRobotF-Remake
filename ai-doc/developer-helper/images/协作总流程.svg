@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <rect width="1400" height="760" fill="#f7f2e8"/>
+  <rect x="28" y="28" width="1344" height="704" rx="28" fill="#fffaf1" stroke="#d6c4a9" stroke-width="4"/>
+  <text x="700" y="82" text-anchor="middle" font-size="34" font-family="Microsoft YaHei, Arial" fill="#5d4631" font-weight="700">AI 协作开发总流程</text>
+  <text x="700" y="118" text-anchor="middle" font-size="18" font-family="Microsoft YaHei, Arial" fill="#9a7758">从提需求到落代码，再到规则沉淀的标准路径</text>
+
+  <g font-family="Microsoft YaHei, Arial">
+    <rect x="90" y="180" width="210" height="100" rx="20" fill="#f3c36a" stroke="#9c7444" stroke-width="3"/>
+    <text x="195" y="225" text-anchor="middle" font-size="26" fill="#ffffff" font-weight="700">提出需求</text>
+    <text x="195" y="255" text-anchor="middle" font-size="18" fill="#ffffff">目标 / 边界 / 限制</text>
+
+    <rect x="360" y="180" width="230" height="100" rx="20" fill="#66c7c4" stroke="#417a79" stroke-width="3"/>
+    <text x="475" y="225" text-anchor="middle" font-size="26" fill="#ffffff" font-weight="700">分析归属层</text>
+    <text x="475" y="255" text-anchor="middle" font-size="18" fill="#ffffff">Module / Panel / System / Editor</text>
+
+    <rect x="650" y="180" width="240" height="100" rx="20" fill="#7ec95d" stroke="#4f7d3d" stroke-width="3"/>
+    <text x="770" y="225" text-anchor="middle" font-size="26" fill="#ffffff" font-weight="700">最小改动方案</text>
+    <text x="770" y="255" text-anchor="middle" font-size="18" fill="#ffffff">先确认再开工</text>
+
+    <rect x="950" y="180" width="250" height="100" rx="20" fill="#70a0f1" stroke="#466794" stroke-width="3"/>
+    <text x="1075" y="225" text-anchor="middle" font-size="26" fill="#ffffff" font-weight="700">显示对象准备</text>
+    <text x="1075" y="255" text-anchor="middle" font-size="18" fill="#ffffff">需要时先手动创建 Prefab</text>
+
+    <rect x="230" y="410" width="250" height="100" rx="20" fill="#d69ce9" stroke="#8a6296" stroke-width="3"/>
+    <text x="355" y="455" text-anchor="middle" font-size="26" fill="#ffffff" font-weight="700">编码实现</text>
+    <text x="355" y="485" text-anchor="middle" font-size="18" fill="#ffffff">日志 / 注释 / 事件驱动</text>
+
+    <rect x="560" y="410" width="250" height="100" rx="20" fill="#e78686" stroke="#995757" stroke-width="3"/>
+    <text x="685" y="455" text-anchor="middle" font-size="26" fill="#ffffff" font-weight="700">联调修正</text>
+    <text x="685" y="485" text-anchor="middle" font-size="18" fill="#ffffff">编译 / 运行 / 现象反馈</text>
+
+    <rect x="890" y="410" width="280" height="100" rx="20" fill="#c9a56a" stroke="#856741" stroke-width="3"/>
+    <text x="1030" y="455" text-anchor="middle" font-size="26" fill="#ffffff" font-weight="700">规则沉淀</text>
+    <text x="1030" y="485" text-anchor="middle" font-size="18" fill="#ffffff">适合通用化的内容写入 prompt</text>
+
+    <line x1="300" y1="230" x2="360" y2="230" stroke="#8b6a49" stroke-width="8"/>
+    <polygon points="360,230 338,218 338,242" fill="#8b6a49"/>
+    <line x1="590" y1="230" x2="650" y2="230" stroke="#8b6a49" stroke-width="8"/>
+    <polygon points="650,230 628,218 628,242" fill="#8b6a49"/>
+    <line x1="890" y1="230" x2="950" y2="230" stroke="#8b6a49" stroke-width="8"/>
+    <polygon points="950,230 928,218 928,242" fill="#8b6a49"/>
+
+    <line x1="1075" y1="280" x2="1075" y2="345" stroke="#8b6a49" stroke-width="8"/>
+    <polygon points="1075,345 1063,323 1087,323" fill="#8b6a49"/>
+    <line x1="1075" y1="345" x2="355" y2="345" stroke="#8b6a49" stroke-width="8"/>
+    <line x1="355" y1="345" x2="355" y2="410" stroke="#8b6a49" stroke-width="8"/>
+    <polygon points="355,410 343,388 367,388" fill="#8b6a49"/>
+
+    <line x1="480" y1="460" x2="560" y2="460" stroke="#8b6a49" stroke-width="8"/>
+    <polygon points="560,460 538,448 538,472" fill="#8b6a49"/>
+    <line x1="810" y1="460" x2="890" y2="460" stroke="#8b6a49" stroke-width="8"/>
+    <polygon points="890,460 868,448 868,472" fill="#8b6a49"/>
+
+    <text x="700" y="635" text-anchor="middle" font-size="20" fill="#6d543d">经验：方案先行、显示对象先准备、实现与显示解耦、可复用规则沉淀进 prompt</text>
+  </g>
+</svg>
