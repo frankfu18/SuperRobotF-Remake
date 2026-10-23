@@ -16,9 +16,7 @@ public partial class MainPanel : UIPanel
         AddButtonClick(this.m_Button_GM, OnGMClick);
         AddButtonClick(this.m_Button_Setting, OnClickSetting);
         AddButtonClick(this.m_Button_Match, OnClickMatch);
-        AddButtonClick(this.m_Button_Card, OnClickCard);
         AddButtonClick(this.m_Button_Head, OnClickHead);
-        AddButtonClick(this.m_Button_Rank, OnClickRank);
 
         AddEventListener(EventConst.Match_Success, OnMatchSuccess);
         AddEventListener(EventConst.User_ScoreRefresh, OnRefreshScore);
@@ -106,19 +104,9 @@ public partial class MainPanel : UIPanel
         this.Close();
     }
 
-    private void OnClickCard()
-    {
-        UISystem.Instance.Open(UIConfig.CardPanel);
-    }
-
     private void OnClickHead()
     {
         UISystem.Instance.Open(UIConfig.UserPanel);
-    }
-
-    private void OnClickRank()
-    {
-        UISystem.Instance.Open(UIConfig.RankPanel);
     }
 
     private void OnShowGM(bool _active)
