@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module name="cfg.asset">
+	<bean name="AssetInfo">
+		
+		<bean name="Texture"> 
+			<var name="path" type="string"/>
+		</bean>
+		
+		<bean name="Sprite"> 
+			<var name="altasName" type="string"/>
+			<var name="spriteName" type="string"/>
+		</bean>
+		
+		<bean name="Spine"> 
+			<var name="path" type="string"/>
+			<var name="defaultAnim" type="string"/>
+			<var name="scale" type="float"/>
+		</bean>
+	</bean>
+
+    <config name="Asset" input="asset.xlsx" group="client">
+        <var name="assetId" type="string"/>
+		<var name="assetInfo" type="AssetInfo"/>
+    </config>
+	
+	
+</module>

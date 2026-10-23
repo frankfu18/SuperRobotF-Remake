@@ -1,0 +1,200 @@
+version: 2
+tpsheetFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/0/0_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/0/0_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/135/135_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/135/135_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/180/180_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/180/180_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/225/225_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/225/225_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/270/270_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/270/270_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/315/315_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/315/315_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/45/45_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/45/45_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/90/90_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11002/90/90_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/0/0_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/0/0_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/135/135_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/135/135_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/180/180_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/180/180_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/225/225_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/225/225_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/270/270_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/270/270_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/315/315_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/315/315_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/45/45_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/45/45_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/90/90_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11006/90/90_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/0/0_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/0/0_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/135/135_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/135/135_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/180/180_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/180/180_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/225/225_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/225/225_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/270/270_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/270/270_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/315/315_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/315/315_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/45/45_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/45/45_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/90/90_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11009/90/90_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/0/0_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/0/0_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/135/135_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/135/135_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/180/180_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/180/180_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/225/225_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/225/225_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/270/270_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/270/270_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/315/315_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/315/315_walk.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/45/45_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/90/90_idle.tpsheet
+- Assets/GameMain/Animations/Frame/npc_mod_11010/90/90_walk.tpsheet
+- Assets/Res/UI/Scene/HouseBuilding.tpsheet
+textureFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/0/0_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/0/0_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/135/135_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/135/135_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/180/180_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/180/180_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/225/225_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/225/225_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/270/270_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/270/270_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/315/315_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/315/315_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/45/45_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/45/45_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/90/90_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11002/90/90_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/0/0_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/0/0_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/135/135_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/135/135_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/180/180_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/180/180_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/225/225_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/225/225_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/270/270_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/270/270_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/315/315_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/315/315_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/45/45_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/45/45_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/90/90_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11006/90/90_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/0/0_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/0/0_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/135/135_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/135/135_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/180/180_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/180/180_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/225/225_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/225/225_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/270/270_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/270/270_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/315/315_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/315/315_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/45/45_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/45/45_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/90/90_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11009/90/90_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/0/0_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/0/0_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/135/135_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/135/135_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/180/180_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/180/180_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/225/225_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/225/225_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/270/270_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/270/270_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/315/315_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/315/315_walk.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/45/45_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/90/90_idle.png
+- Assets/GameMain/Animations/Frame/npc_mod_11010/90/90_walk.png
+- Assets/Res/UI/Scene/HouseBuilding.png
+normalmapFileNames:
+- Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+enableDebugOutput: 0

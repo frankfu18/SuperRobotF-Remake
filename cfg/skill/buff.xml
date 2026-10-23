@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module name="cfg.skill">
+	<enum name="EBuffStateType"> Buff 状态类型
+		<var name="None" value="0"/> 无特殊状态
+		<var name="Fire" value="1"/> 灼烧状态
+		<var name="Frozen" value="2"/> 冰冻或减速状态
+	</enum>
+
+	<enum name="EBuffEffectTarget"> Buff 效果作用目标
+		<var name="Owner" value="1"/> 当前 Buff 持有者
+		<var name="TriggerTarget" value="2"/> 本次触发事件携带的目标
+		<var name="OwnerPlanet" value="3"/> Buff 持有实体所属的己方星球
+	</enum>
+
+	<bean name="BuffDestroyType"> Buff 销毁规则
+		<bean name="ImmediateDestroy"/> 成功生效后立即销毁
+		<bean name="Forever"/> 持续到实体、来源或战斗清理
+		<bean name="DurationDestroy">
+			<var name="durationSecond" type="float"/> 持续时间，单位秒
+		</bean>
+	</bean>
+
+	<bean name="BuffTriggerType"> Buff 触发条件
+		<var name="ratio" type="int"/> 条件满足后的生效概率，使用万分比，10000 表示 100%
+		<bean name="ImmediateTrigger"/> 获得 Buff 时立即触发一次
+		<bean name="IntervalTrigger">
+			<var name="second" type="float"/> 周期触发间隔，单位秒
+		</bean>
+		<bean name="CollisionHitTargetTrigger">
+			<var name="targetEntityType" type="ETargetEntityType"/> 持有者主动碰撞到的目标实体类型
+		</bean>
+		<bean name="BeforeCollisionDamageTrigger">
+			<var name="targetEntityType" type="ETargetEntityType"/> 持有者即将承受碰撞伤害时的攻击者实体类型
+		</bean>
+		<bean name="BeCollidedTrigger"/> 每次受到独立有效碰撞时触发，不配置额外冷却
+		<bean name="DealEffectiveDamageTrigger">
+			<var name="targetEntityType" type="ETargetEntityType"/> 造成有效生命伤害的目标实体类型
+		</bean>
+		<bean name="HpRatioLessIntervalTrigger">
+			<var name="hpRatio" type="float"/> 触发生命比例阈值，0.3 表示 30%
+			<var name="intervalSecond" type="float"/> 条件持续满足时的重复触发间隔，单位秒
+		</bean>
+	</bean>
+
+	<bean name="BuffStatcking"> Buff 叠加方式
+		<bean name="StackNone"/> 同一来源重复添加时不处理
+		<bean name="StackReset"/> 同一来源重复添加时刷新持续时间或覆盖效果值
+		<bean name="StackNum">
+			<var name="num" type="int"/> 最大额外叠加次数；小于零表示不限制
+		</bean>
+	</bean>
+
+	<bean name="BuffEffectContent"> Buff 生效内容
+		<bean name="AttributeChange">
+			<var name="baseAttr" type="cfg.attribute.AttributeLongNumber"/> 添加到目标属性组件的属性修正
+		</bean>
+		<bean name="AddBuff">
+			<var name="target" type="EBuffEffectTarget"/> 新 Buff 的作用目标
+			<var name="buffId" type="int" ref="buffconfig"/> 需要添加的 Buff 配置 ID
+		</bean>
+		<bean name="ReverseMoveDirection"/> 立即将伴星轨道运行方向乘以负一
+		<bean name="ImmuneCurrentDamage"/> 免疫触发本 Buff 的当前一次伤害
+		<bean name="KnockbackTriggerTarget">
+			<var name="distance" type="float"/> 沿碰撞方向击退目标的相对距离
+		</bean>
+		<bean name="ReleaseBulletAtCollisionPoint">
+			<var name="bulletId" type="int" ref="bulletconfig"/> 在实际碰撞点生成的子弹配置 ID
+			<var name="targetEntityType" type="ETargetEntityType"/> 子弹允许命中的目标实体类型
+		</bean>
+		<bean name="AddBulletHitEffect">
+			<var name="bulletIds" type="list,int"/> 需要追加命中效果的子弹配置 ID 列表
+			<var name="hitEffect" type="BulletHitEffectType"/> 追加到匹配子弹的命中效果
+		</bean>
+		<bean name="SkillReleaseIntervalSub">
+			<var name="skillIds" type="list,int"/> 需要缩短释放间隔的技能配置 ID 列表
+			<var name="subRatio" type="float"/> 技能释放间隔减少比例，0.2 表示减少 20%
+		</bean>
+		<bean name="FixedDamage">
+			<var name="damage" type="int"/> 每次触发造成的固定伤害
+			<var name="damageType" type="cfg.attribute.EDamageType"/> 固定伤害类型
+		</bean>
+		<bean name="AddBoostEnergy">
+			<var name="value" type="int"/> 每次触发增加的加速能量固定值
+		</bean>
+		<bean name="EffectiveDamageToHeal">
+			<var name="target" type="EBuffEffectTarget"/> 有效伤害转化后的治疗目标
+			<var name="ratio" type="float"/> 有效生命伤害转化为治疗的比例，0.12 表示 12%
+		</bean>
+		<bean name="AddShield">
+			<var name="value" type="int"/> 护盾固定值；同一运行时 Buff 再次生效时覆盖旧值
+		</bean>
+	</bean>
+
+	<bean name="BuffAssetInfo"> Buff 表现资源
+		<bean name="NoneAsset"/> 不加载表现资源
+		<bean name="MountPoint">
+			<var name="battleAssetId" type="string" ref="battleasset"/> 跟随目标移动的战斗资源 ID
+		</bean>
+		<bean name="OnceShow">
+			<var name="battleAssetId" type="string" ref="battleasset"/> 每次实际生效时播放一次的战斗资源 ID
+		</bean>
+	</bean>
+
+	<config name="BuffConfig" input="buff.xlsx">
+		<var name="id" type="int"/> Buff 稳定唯一 ID
+		<var name="note" type="string" group="designer"/> 策划备注，不输出到客户端
+		<var name="desc" type="string"/> Buff 中文描述
+		<var name="assetInfo" type="BuffAssetInfo"/> 表现资源信息
+		<var name="triggerType" type="BuffTriggerType"/> 生效触发条件与万分比概率
+		<var name="destroyType" type="BuffDestroyType"/> 销毁规则
+		<var name="buffStateType" type="EBuffStateType"/> 状态分类
+		<var name="buffStacking" type="BuffStatcking"/> 重复添加时的叠加规则
+		<var name="effectContent" type="BuffEffectContent"/> 实际生效内容
+	</config>
+</module>

@@ -1,0 +1,6 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" preserve="all" />
+    <assembly fullname="FrankGame" preserve="all"/>
+  <assembly fullname="HotUpdate" preserve="all"/>
+  <assembly fullname="Base" preserve="all"/>
+</linker>

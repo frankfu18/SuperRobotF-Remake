@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module name="cfg.skill">
+
+	<bean name="BulletHitEffectType"> 击中触发效果
+		<bean name="BulletHitDamageEffect"> 伤害
+			<var name="atkRatio" type="float"/> 攻击力直接倍率，1 表示 100%
+			<var name="damageType" type="cfg.attribute.EDamageType"/> 伤害类型
+		</bean>
+
+		<bean name="BulletHitEffects"> 多个命中效果
+			<var name="effects" type="list,BulletHitEffectType"/> 按配置顺序依次生效
+		</bean>
+
+		<bean name="BulletHitBuffEffect"> buff效果
+			<var name="buffId" type="int" ref="buffconfig"/> 命中后添加的 Buff 配置 ID
+		</bean>
+	</bean>
+	
+	<bean name="BulletType"> 子弹类型
+		<bean name="FlyBullet"> 飞行子弹
+			<var name="speed" type="float"/>飞行速度
+			<var name="maxDistance" type="float"/>最大飞行距离，单位为 Unity 世界单位
+		</bean>
+		
+		<bean name="TargetFlyBullet"> 目标飞行子弹,锁定目标
+			<var name="speed" type="float"/>飞行速度
+			<var name="maxDistance" type="float"/>最大飞行距离，单位为 Unity 世界单位
+		</bean>
+		
+		<bean name="ImmediateBullet"> 瞬间子弹
+		</bean>
+
+	</bean>
+
+	<bean name="BulletReleaseCount"> 子弹数量与发射方式
+		<bean name="Single"/> 单发一枚子弹
+		<bean name="Continuous"> 连续发射多枚子弹
+			<var name="count" type="int"/> 连续发射总数量
+			<var name="intervalSecond" type="float"/> 相邻两枚子弹的间隔秒数
+		</bean>
+		<bean name="Circle"> 环形等角度发射
+			<var name="count" type="int"/> 360 度范围内均匀发射的子弹数量
+		</bean>
+	</bean>
+	
+	<bean name="BulletTargetType"> 子弹目标类型
+		<bean name="SingleTarget"> 单一目标
+		</bean>
+		
+		<bean name="RangeTarget"> 范围内目标
+			<var name="radius" type="float"/>半径
+		</bean>
+		
+		<bean name="DirectionTarget"> 攻击方向目标
+		</bean>
+	</bean>
+	
+	<config name="BulletConfig" input="bullet.xlsx">
+		<var name="id" type="int"/> 子弹稳定唯一 ID
+		<var name="note" type="string" group="designer"/> 策划备注，不输出到客户端
+		<var name="assetId" type="string"/> 子弹资源 ID；无资源时填 null
+		<var name="hitAssetId" type="string"/>子弹命中效果
+		<var name="bulletType" type="BulletType"/> 子弹的移动或瞬发方式
+		<var name="targetType" type="BulletTargetType"/> 子弹命中的空间目标规则
+		<var name="releaseCount" type="BulletReleaseCount"/> 单次技能释放时的子弹数量与发射方式
+		<var name="hitEffect" type="BulletHitEffectType"/> 子弹命中后执行的效果
+    </config>
+	
+</module>

@@ -1,0 +1,16 @@
+{
+    "name": "FrankGame.Timer",
+    "rootNamespace": "",
+    "references": [
+        "GUID:621b419c0923c6a4c9fe45d7b2dd89b7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,19 @@
+﻿private MonitorDictionary<T1, T2> m_P1;
+        
+public IDictionary<T1, T2> P2 {
+    get {
+        if (m_P1 != null) return m_P1;
+        if (Datasource.P1 == null) {
+            Datasource.P1 = new Dictionary<T1, T2>();
+            Save();
+        }
+        m_P1 = new MonitorDictionary<T1, T2>(Datasource.P1) { OnChanged = Save };
+        return m_P1;
+    }
+    set {
+        var ds = DataBaseUtil.GetMonitorDicSource(value);
+        Datasource.P1 = ds ?? new Dictionary<T1, T2>();
+        m_P1 = new MonitorDictionary<T1, T2>(Datasource.P1) { OnChanged = Save };
+        Save();
+    }
+}

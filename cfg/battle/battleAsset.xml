@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module name="cfg.battle">
+
+	<enum name="EBattleAssetType">
+		<var name="Sprite" value="1"/>
+		<var name="Prefab" value="2"/>
+		<var name="Spine" value="3"/>
+		<var name="Effect" value="4"/>
+	</enum>
+	
+	<bean name="BattleAssetInfo"> 
+		<bean name="None"> 
+		</bean>
+		
+		<bean name="EffectAssetInfo"> 
+			<var name="duration" type="int"/>特效持续时间(毫秒)，小于等于0代表常驻，大于0代表几毫秒后销毁
+			<var name="delay" type="int"/>延迟时间
+		</bean>
+	</bean>
+	
+    <config name="BattleAsset" input="battleAsset.xlsx" group="client">
+        <var name="assetId" type="string"/>
+		<var name="assetType" type="EBattleAssetType"/>
+		<var name="path" type="string"/>
+		<var name="assetInfo" type="BattleAssetInfo"/>
+    </config>
+	
+	
+</module>

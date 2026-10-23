@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module name="cfg">
+    <module name="condition">
+
+        <enum name="ENumCompareType">
+            <var name="Eq" value="1"/>  等于
+            <var name="Gt" value="2"/>  大于
+            <var name="Gte" value="3"/> 大于等于
+            <var name="Lt" value="4"/>  小于
+            <var name="Lte" value="5"/> 小于等于
+            <var name="OddNumber" value="6"/>  奇数
+            <var name="EvenNumber" value="7"/> 偶数
+        </enum>
+
+        <enum name="EBattleResultType">
+            <var name="All" value="1"/>
+            <var name="Win" value="2"/>
+            <var name="Fail" value="3"/>
+        </enum>
+
+        <bean name="Condition">
+            <bean name="None">
+            </bean>
+			
+			<bean name="Currency">
+                <var name="currency" type="cfg.common.ECurrencyType"/>
+                <var name="amount" type="long"/>
+            </bean>
+
+            <bean name="Item">
+                <var name="itemId" type="int"/>
+                <var name="amount" type="long"/>
+            </bean>
+			
+            <bean name="BuyMonthlyCard">    持有月卡
+            </bean>
+			
+			<bean name="OwnItem"> 拥有某个道具后
+				<var name="itemId" type="int" ref="item"/>
+            </bean>
+            
+            <bean name="And">
+                <var name="conditions" type="array:Condition"/>
+            </bean>
+			
+            <bean name="Or">
+                <var name="conditions" type="array:Condition"/>
+            </bean>
+            
+        </bean>
+    </module>
+</module>

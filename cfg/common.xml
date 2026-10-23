@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<module name="cfg">
+	<group name="server:client:designer:editor"/>
+
+	<bean name="Vector2" sep=",">
+		<var name="x" type="float"/>
+		<var name="y" type="float"/>
+	</bean>
+	
+	<bean name="Vector3" sep=",">
+		<var name="x" type="float"/>
+		<var name="y" type="float"/>
+		<var name="z" type="float"/>
+	</bean>
+	
+	<bean name="Vector2Int" sep=",">
+		<var name="x" type="int"/>
+		<var name="y" type="int"/>
+	</bean>
+</module>

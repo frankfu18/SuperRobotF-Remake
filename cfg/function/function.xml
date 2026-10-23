@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module name="cfg.function">
+
+	<enum name="EFunctionType">
+		<var alias="军团" name="Legion" value="1"/>
+		<var alias="排行榜" name="Rank" value="2"/>
+	</enum>
+	
+	<bean name="JumpInfo">
+		<bean name="JumpShopInfo">跳转商店
+		</bean>
+		
+		<bean name="JumpBattleInfo">跳转战斗
+		</bean>
+		
+		<bean name="AdGetCurrencyInfo">广告获得货币
+			<var name="currency" type="cfg.common.ECurrencyType"/>
+			<var name="amount" type="long"/>
+			<var name="dailyLimitTime" type="int"/> 每日限制次数，-1不限制
+		</bean>
+	</bean>
+	
+	<config input="jump.xlsx" name="Jump">
+		<var name="id" type="int"/>
+		<var name="desc" type="string" group="client"/>
+		<var name="jumpInfo" type="JumpInfo"/>
+	</config>
+
+</module>

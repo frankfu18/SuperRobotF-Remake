@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module name="cfg.item">
+	<enum name="EItemQuality">
+		<var alias="白" name="White" value="1"/>
+		<var alias="绿" name="Green" value="2"/>
+		<var alias="蓝" name="Blue" value="3"/>
+		<var alias="紫" name="Purple" value="4"/>
+		<var alias="橙" name="Orange" value="5"/>
+		<var alias="红" name="Red" value="6"/>
+	</enum>
+	
+	<enum name="EItemType">
+		<var alias="装备碎片" name="EquipFragment" value="1"/>
+		<var alias="礼包" name="Gift" value="2"/>
+		<var alias="竞技场宝箱" name="ArenaBox" value="3"/>
+	</enum>
+	
+	<bean name="ItemInfo">
+		<bean name="None">
+		</bean>
+		
+		<bean name="GiftInfo">
+			<var name="bonusId" type="int" ref="bonusdata"/>
+			<var name="autoOpen" type="bool"/>是否自动开启
+		</bean>
+		
+		<bean name="ArenaBoxInfo">
+			<var name="bonusId" type="int"/>
+		</bean>
+	</bean>
+	
+	<config input="item.xlsx" name="Item">
+		<var name="id" type="int"/>
+		<var name="quality" type="EItemQuality"/>
+		<var name="itemType" type="EItemType"/>
+		<var name="name" type="string"/> 名称
+		<var name="desc" type="string"/> 描述
+		<var name="icon" type="string"/> 图标
+		<var name="itemInfo" type="ItemInfo"/>
+	</config>
+	
+	<config input="quality.xlsx" name="Quality">
+		<var name="quality" type="EItemQuality"/>
+		<var name="itemBg" type="string" ref="asset"/>
+		<var name="cardFrame" type="string" ref="asset"/>
+		<var name="equipBigBg" type="string" ref="asset"/>
+		<var name="equipColor" type="string"/>
+	</config>
+	
+</module>

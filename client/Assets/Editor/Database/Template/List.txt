@@ -1,0 +1,19 @@
+﻿private IList<T1> m_P1;
+        
+public IList<T1> P2 {
+    get {
+        if (m_P1 != null) return m_P1;
+        if (Datasource.P1 == null) {
+            Datasource.P1 = new List<T1>();
+            Save();
+        }
+        m_P1 = new MonitorList<T1>(Datasource.P1) { OnChanged = Save };
+        return m_P1;
+    }
+    set {
+        var ds = DataBaseUtil.GetMonitorListSource(value);
+        Datasource.P1 = ds ?? new List<T1>();
+        m_P1 = new MonitorList<T1>(Datasource.P1) { OnChanged = Save };
+        Save();
+    }
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module name="cfg.attribute">
+	<enum name="EAttributeType">
+		<var alias="生命值" name="HP" value="10"/> 当前或基础生命值属性
+		<var alias="生命值加成" name="HPAdd" value="11"/> 生命值加成属性
+		<var alias="生命值减少" name="HPSub" value="12"/> 生命值减少属性
+		
+		<var alias="攻击力" name="Attack" value="20"/> 基础攻击力属性；星球和伴星碰撞伤害均使用该属性
+		<var alias="攻击力加成" name="AttackAdd" value="21"/> 攻击力加成属性
+		<var alias="攻击力减少" name="AttackSub" value="22"/> 攻击力减少属性
+		
+		<var alias="暴击率" name="CritChance" value="30"/> 触发暴击的概率属性
+		<var alias="暴击伤害" name="CritMultiplier" value="31"/> 暴击伤害倍率属性
+		
+		<var alias="攻击速度" name="AttackSpeed" value="40"/> 基础攻击速度属性
+		<var alias="攻击速度加成" name="AttackSpeedAdd" value="41"/> 攻击速度加成属性
+		<var alias="攻击速度减少" name="AttackSpeedSub" value="42"/> 攻击速度减少属性
+		
+		<var alias="移动速度" name="MoveSpeed" value="50"/> 星球表示线性移动速度，伴星表示轨道角速度
+		<var alias="移动速度加成" name="MoveSpeedAdd" value="51"/> 移动速度加成属性
+		<var alias="移动速度减少" name="MoveSpeedSub" value="52"/> 移动速度减少属性
+		
+		<var alias="攻击距离" name="AttackDistance" value="60"/> 基础攻击距离属性
+		
+		<var alias="伤害加成" name="DamageAdd" value="71"/> 造成伤害时的加成属性
+		<var alias="伤害减免" name="DamageSub" value="72"/> 造成伤害时的减免属性
+		<var alias="受伤加成" name="BeHitDamageUp" value="73"/> 承受伤害时的增伤属性
+		<var alias="受伤减少" name="BeHitDamageSub" value="74"/> 承受伤害时的减伤属性
+
+		<var alias="半径" name="Radius" value="90"/> 实体自身半径；伴星直接使用该值作为自身碰撞半径
+		<var alias="引力强度" name="GravityStrength" value="91"/> 碎石受到星球牵引时的径向加速度，数值越大加速度越快；不影响引力范围
+		<var alias="加速能量每秒恢复" name="BoostEnergyRecoveryPerSecond" value="92"/> 星球每秒恢复的加速能量
+		<var alias="轨道半径" name="OrbitRadius" value="93"/> 伴星绕所属星球运行时的轨道半径
+		<var alias="复活时间" name="RespawnTime" value="95"/> 伴星被摧毁后重新生成所需时间，单位：毫秒
+		<var alias="生命恢复" name="HpRecoveryPerSecond" value="96"/> 实体每秒固定恢复的生命值
+		<var alias="半径增加" name="RadiusAdd" value="97"/> 实体半径百分比增加
+		<var alias="半径减少" name="RadiusSub" value="98"/> 实体半径百分比减少
+		<var alias="对星球伤害增加" name="PlanetDamageAdd" value="99"/> 对星球造成的伤害百分比增加
+		<var alias="对星球伤害减少" name="PlanetDamageSub" value="100"/> 对星球造成的伤害百分比减少
+		<var alias="对伴星伤害增加" name="SatelliteDamageAdd" value="101"/> 对伴星造成的伤害百分比增加
+		<var alias="对伴星伤害减少" name="SatelliteDamageSub" value="102"/> 对伴星造成的伤害百分比减少
+		<var alias="轨道半径增加" name="OrbitRadiusAdd" value="103"/> 伴星轨道半径百分比增加
+		<var alias="轨道半径减少" name="OrbitRadiusSub" value="104"/> 伴星轨道半径百分比减少
+		<var alias="引力范围增加" name="GravityRangeAdd" value="105"/> 星球引力范围增加值，单位为星球半径倍数
+		<var alias="碰撞掉落增加" name="CollisionDropStoneRatioAdd" value="106"/> 碰撞击杀敌方星球或伴星时的碎石掉落百分比增加
+		<var alias="碰撞掉落减少" name="CollisionDropStoneRatioSub" value="107"/> 碰撞或碰撞击杀产生的碎石百分比减少
+		<var alias="碰撞承伤增加" name="CollisionBeHitDamageUp" value="108"/> 受到碰撞伤害的百分比增加
+		<var alias="碰撞承伤减少" name="CollisionBeHitDamageSub" value="109"/> 受到碰撞伤害的百分比减少
+		<var alias="充能恢复增加" name="BoostEnergyRecoveryPerSecondAdd" value="110"/> 加速能量每秒恢复百分比增加
+		<var alias="加速速度增加" name="BoostSpeedAdd" value="111"/> 星球处于加速状态时的速度百分比增加
+		<var alias="加速能量上限增加" name="BoostEnergyMaxAdd" value="112"/> 加速能量上限固定值增加
+		<var alias="复活时间减少" name="RespawnTimeSub" value="113"/> 伴星复活时间百分比减少
+		<var alias="生命恢复减少" name="HpRecoverySub" value="114"/> 实体受到的生命恢复百分比减少
+		<var alias="击落碎石吸取概率加成" name="DropStoneAbsorbChanceAdd" value="115"/> 由自身火球或燃烧伤害击落的碎石被所属星球吸取的概率百分比加成
+		<var alias="生命百分比恢复" name="HpRecoveryRatioPerSecond" value="116"/> 实体每秒按照自身当前最大生命值恢复的比例，使用万分比，10000 表示 100%
+	</enum>
+	
+	<enum name="EDamageType">
+		<var name="Normal" value="1"/> 普通伤害
+		<var name="Collision" value="2"/> 碰撞伤害
+		<var name="Fire" value="3"/> 火焰伤害
+		<var name="Frozen" value="4"/> 冰冻伤害
+    </enum>
+	
+	<enum name="EAttrNumberType">
+		<var name="Fixed" value="1"/> 固定数值
+		<var name="Ratio" value="2"/> 万分比数值，10000 表示 100%
+		<var name="Millsecond" value="3"/> 时间数值，单位：毫秒
+		<var name="Round" value="4"/> 按小数点后两位进行取整显示的数值
+		<var name="RoundPreSecond" value="5"/> 每秒数值，按原始值乘 100 后换算显示
+    </enum>
+	
+	<bean name="AttributeInfo">
+		<bean name="None">
+		</bean>
+		
+		<bean name="AttributeNumber">
+			<var name="type" type="EAttributeType"/> 属性类型
+			<var name="number" type="cfg.common.XNumber"/> 32 位属性数值；具体解释由属性表中的数值类型决定
+		</bean>
+		
+		<bean name="AttributeLongNumber">
+			<var name="type" type="EAttributeType"/> 属性类型
+			<var name="number" type="cfg.common.XLong"/> 64 位属性数值；具体解释由属性表中的数值类型决定
+		</bean>
+		
+		<bean name="And">
+			<var name="attributes" type="array:AttributeInfo"/> 组合在一起生效的一组属性配置
+		</bean>
+	</bean>
+	
+    <config name="Attribute" input="attribute.xlsx">
+		<var name="attributeType" type="EAttributeType"/> 属性类型，同时作为本表唯一键
+		<var name="note" type="string" group="desginer"/> 策划侧属性备注，不输出到客户端配置
+		<var name="name" type="string" group="client"/> 客户端显示用属性名称
+		<var name="desc" type="string" group="client"/> 客户端显示用属性描述
+		<var name="attrNumberType" type="EAttrNumberType"/> 属性数值的显示与换算类型
+    </config>
+</module>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module name="cfg.global">
+
+	<bean name="GlobalInfo"> 
+		<bean name="GInt32"> 
+			<var name="value" type="int"/>
+		</bean>
+		
+		<bean name="GInt64"> 
+			<var name="value" type="long"/>
+		</bean>
+		
+		<bean name="GString"> 
+			<var name="value" type="string"/>
+		</bean>
+		
+		<bean name="GFloat"> 
+			<var name="value" type="float"/>
+		</bean>
+		
+		<bean name="GBool"> 
+			<var name="value" type="bool"/>
+		</bean>
+	</bean>
+	
+
+    <config name="Global" input="global.xlsx">
+        <var name="key" type="string"/>
+		<var name="desc" type="string" group="designer"/>
+		<var name="info" type="GlobalInfo"/>
+    </config>
+	
+	
+</module>

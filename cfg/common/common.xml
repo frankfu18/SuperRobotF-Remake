@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module name="cfg.common">
+	<enum name="ECurrencyType">
+		<var alias="金币" name="Gold" value="1"/>
+		<var alias="钻石" name="Diamond" value="2"/>
+    </enum>
+	
+	<bean name="Cost">
+		<bean name="None">
+		</bean>
+
+		<bean name="AdCost">看广告获得
+		</bean>
+		
+		<bean name="CurrencyCost">消耗游戏内货币
+			<var name="currency" type="ECurrencyType"/>
+			<var name="amount" type="long"/>
+		</bean>
+		
+		<bean name="ItemCost">物品消耗
+			<var name="itemId" type="int" ref="item"/>
+			<var name="itemCount" type="long"/>
+		</bean>
+		
+		<bean name="And">
+			<var name="costs" type="array:Cost"/>
+		</bean>
+		
+		<bean name="Or">
+			<var name="costs" type="array:Cost"/>
+		</bean>
+
+		<bean name="MoneyCost">	花钱买
+			<var name="amount" type="float"/>
+		</bean>
+
+	</bean>
+	
+	<enum name="ENumberType">
+		<var name="Int" value="1"/>
+		<var name="Long" value="2"/>
+		<var name="Float" value="3"/>
+		<var name="BigDecimal" value="4"/>
+    </enum>	
+	
+	<bean name="XNumber">
+		<bean name="XInt">
+			<var name="amount" type="int"/>
+		</bean>
+		
+		<bean name="XLong">
+			<var name="amount" type="long"/>
+		</bean>
+		
+		<bean name="XFloat">
+			<var name="amount" type="float"/>
+		</bean>
+		
+		<bean name="XBigDecimal">
+			<var name="amount" type="string"/>
+		</bean>
+	</bean>
+
+	<config input="currency.xlsx" name="Currency">
+		<var name="currencyType" type="ECurrencyType"/>
+		<var name="name" type="string"/>
+		<var name="desc" type="string"/>
+		<var name="quality" type="cfg.item.EItemQuality"/>
+		<var name="icon" type="string" ref="asset"/>
+	</config>
+	
+</module>

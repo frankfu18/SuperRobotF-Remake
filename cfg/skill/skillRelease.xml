@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module name="cfg.skill">
+
+	<enum name="ETargetEntityType">目标实体类型
+		<var name="None" value="0"/> 不限制或不需要实体目标
+		<var name="Planet" value="1"/> 星球实体
+		<var name="Satellite" value="2"/> 伴星实体
+		<var name="PlanetAndSatellite" value="3"/> 星球和伴星实体
+		<var name="Any" value="4"/> 任意事件目标；用于碰撞触发时表示所有有效碰撞
+	</enum>
+	
+	<enum name="ESkillTargetType">技能目标
+		<var name="None" value="0"/>无目标
+		<var name="Nearest" value="1"/>距离最近
+		<var name="HpMin" value="2"/>血量最少
+		<var name="Random" value="3"/>随机
+		<var name="All" value="4"/>全体目标
+		<var name="Self" value="5"/>自己
+		<var name="Target" value="6"/>指定目标
+		<var name="Direction" value="7"/>指定方向
+	</enum>
+	
+	<bean name="SkillReleaseType">技能释放类型
+		<bean name="SkillReleaseBullet"> 子弹
+			<var name="bulletId" type="int" ref="bulletconfig"/> 释放的子弹配置 ID
+		</bean>
+		
+		<bean name="SkillReleaseBuff"> buff
+			<var name="buffId" type="int" ref="buffconfig"/> 释放的 Buff 配置 ID
+		</bean>
+		
+		<bean name="SkillReleaseEmpty">不释放
+		</bean>
+
+		<bean name="SkillReleaseSplitSatellite"> 分裂伴星
+			<var name="count" type="int"/> 分裂后的伴星总数量
+			<var name="sharedHp" type="bool"/> 分裂子体是否共享同一份生命
+			<var name="angle" type="float"/> 分裂子体之间的夹角，单位度
+			<var name="childRadiusRatio" type="float"/> 单个子体相对原伴星的半径倍率
+		</bean>
+	</bean>
+	
+	<bean name="SkillReleaseRule">技能释放规则
+		<bean name="NoRelease"> 无额外释放条件
+		</bean>
+		
+		<bean name="ImmediateRelease"> 立即释放
+		</bean>
+		
+		<bean name="TargetInRangeRelease"> 范围内存在合法目标时才释放
+			<var name="radius" type="float"/> 以技能释放者为圆心的固定世界半径
+		</bean>
+	</bean>
+	
+	<bean name="SkillShowEffect">技能释放特效
+		<bean name="SkillShowNoEffect"> 
+		</bean>
+		
+		<bean name="SkillShowOnceEffect">特效释放一次
+			<var name="battleAssetId" type="string" ref="battleasset"/> 播放一次的战斗特效资源 ID
+		</bean>
+	</bean>
+	
+	
+	<config name="SkillReleaseConfig" input="skillRelease.xlsx">
+		<var name="id" type="int"/> 技能稳定唯一 ID
+		<var name="note" type="string" group="designer"/> 策划备注，不输出到客户端
+		<var name="name" type="string"/> 技能中文名称
+		<var name="desc" type="string"/> 技能中文描述
+		<var name="icon" type="string"/> 技能图标资源 ID；无资源时填 null
+		<var name="playAnim" type="bool"/>是否播放技能动画
+		<var name="showEffect" type="SkillShowEffect"/>是否显示特效
+		<var name="targetEntityType" type="ETargetEntityType"/> 技能允许选择的敌方目标实体类型
+		<var name="targetType" type="ESkillTargetType"/>技能目标
+		<var name="releaseType" type="SkillReleaseType"/>释放类型
+		<var name="releaseRule" type="SkillReleaseRule"/>释放规则
+    </config>
+	
+	
+	
+</module>

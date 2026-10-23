@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PackageLocalization>
+  <Language key="version_checking">
+    <chinese>正在检测版本</chinese>
+    <chineseTraditional>正在檢測版本</chineseTraditional>
+    <english>Checking version</english>
+    <japanese>バージョンをチェックしています</japanese>
+    <korean>버전 확인 중</korean>
+    <vietnamese>Đang kiểm tra phiên bản</vietnamese>
+  </Language>
+  <Language key="version_checkError">
+    <chinese>检测版本错误</chinese>
+    <chineseTraditional>檢測版本錯誤</chineseTraditional>
+    <english>Detecting version errors</english>
+    <japanese>バージョンエラーの検出</japanese>
+    <korean>버전 오류 감지</korean>
+    <vietnamese>Phát hiện lỗi phiên bản</vietnamese>
+  </Language>
+  <Language key="version_needNewClient">
+    <chinese>请下载最新客户端</chinese>
+    <chineseTraditional>請下載最新用戶端</chineseTraditional>
+    <english>Please download the newest client</english>
+    <japanese>最新のクライアントをダウンロードしてください</japanese>
+    <korean>최신 클라이언트를 다운로드하십시오</korean>
+    <vietnamese>Vui lòng download client mới nhất</vietnamese>
+  </Language>
+  <Language key="hotupdate_check">
+    <chinese>正在更新资源</chinese>
+    <chineseTraditional>正在更新資源</chineseTraditional>
+    <english>Updating resources</english>
+    <japanese>リソースの更新</japanese>
+    <korean>리소스 업데이트</korean>
+    <vietnamese>Cập nhật tài nguyên</vietnamese>
+  </Language>
+  <Language key="hotupdate_error">
+    <chinese>更新资源错误</chinese>
+    <chineseTraditional>更新資源錯誤</chineseTraditional>
+    <english>Update resource error</english>
+    <japanese>リソース更新エラー</japanese>
+    <korean>자원 업데이트 오류</korean>
+    <vietnamese>Cập nhật lỗi tài nguyên</vietnamese>
+  </Language>
+  <Language key="hotupdate_downloading">
+    <chinese>正在下载：{0}/{1}</chinese>
+    <chineseTraditional>正在下載：{0}/{1}</chineseTraditional>
+    <english>Downloading:{0}/{1}</english>
+    <japanese>ダウンロード中:{0}/{1}</japanese>
+    <korean>다운로드 중:{0}/{1}</korean>
+    <vietnamese>Đang tải xuống:{0}/{1}</vietnamese>
+  </Language>
+  <Language key="package_ckeckAsset">
+    <chinese>正在检测资源</chinese>
+    <chineseTraditional>正在檢測資源</chineseTraditional>
+    <english>Checking resources</english>
+    <japanese>リソースのチェック</japanese>
+    <korean>리소스 확인</korean>
+    <vietnamese>Kiểm tra tài nguyên</vietnamese>
+  </Language>
+  <Language key="package_decompressAsset">
+    <chinese>正在解压资源({0}/{1})</chinese>
+    <chineseTraditional>正在解壓資源({0}/{1})</chineseTraditional>
+    <english>Decompressing resources({0}/{1})</english>
+    <japanese>リソースの展開({0}/{1})</japanese>
+    <korean>자원 압축 해제({0}/{1})</korean>
+    <vietnamese>Tài nguyên giải nén({0}/{1})</vietnamese>
+  </Language>
+  <Language key="asset_loading">
+    <chinese>正在加载资源</chinese>
+    <chineseTraditional>正在加載資源</chineseTraditional>
+    <english>Loading resources</english>
+    <japanese>リソースをロードしています</japanese>
+    <korean>자원 로드 중</korean>
+    <vietnamese>Đang tải tài nguyên</vietnamese>
+  </Language>
+  <Language key="login_start">
+    <chinese>正在登录</chinese>
+    <chineseTraditional>正在登入</chineseTraditional>
+    <english>Logging in</english>
+    <japanese>ログイン＃ログイン＃</japanese>
+    <korean>로그인</korean>
+    <vietnamese>Đăng nhập</vietnamese>
+  </Language>
+  <Language key="prompt_title">
+    <chinese>提示</chinese>
+    <chineseTraditional>提示</chineseTraditional>
+    <english>Tip</english>
+    <japanese>ヒント</japanese>
+    <korean>힌트</korean>
+    <vietnamese>Gợi ý</vietnamese>
+  </Language>
+  <Language key="prompt_confirm">
+    <chinese>确定</chinese>
+    <chineseTraditional>確定</chineseTraditional>
+    <english>Confirm</english>
+    <japanese>確定</japanese>
+    <korean>확인</korean>
+    <vietnamese>Xác nhận</vietnamese>
+  </Language>
+  <Language key="prompt_cancel">
+    <chinese>取消</chinese>
+    <chineseTraditional>取消</chineseTraditional>
+    <english>Cancel</english>
+    <japanese>キャンセル</japanese>
+    <korean>취소</korean>
+    <vietnamese>Hủy bỏ</vietnamese>
+  </Language>
+  <Language key="prompt_networkError">
+    <chinese>当前网络不可用，请检测您的网络状态。</chinese>
+    <chineseTraditional>當前網絡不可用，請檢測您的網絡狀態。</chineseTraditional>
+    <english>The current network is unavailable, please check your network status.</english>
+    <japanese>現在のネットワークは使用できません。ネットワークの状態を確認してください。</japanese>
+    <korean>현재 네트워크를 사용할 수 없습니다. 네트워크 상태를 확인하십시오.</korean>
+    <vietnamese>Mạng hiện tại không khả dụng, hãy kiểm tra trạng thái mạng của bạn.</vietnamese>
+  </Language>
+</PackageLocalization>

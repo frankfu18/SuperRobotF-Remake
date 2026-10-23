@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><module name="cfg">
+    <module name="bonus">
+        <bean name="Bonus">
+            <bean name="Empty">
+			</bean>
+			
+			<bean name="RefBonus">引用Bonus表id
+				<var name="id" type="int" ref="bonusdata"/>
+			</bean>
+			
+			<bean name="Currency">
+				<var name="currency" type="cfg.common.ECurrencyType"/>
+				<var name="amount" type="long"/>
+			</bean>
+			
+			<bean name="Currencies">
+				<var name="currencies" type="array:Currency"/>
+			</bean>
+			
+			<bean name="ItemId">
+                <var name="itemId" type="int" ref="item"/>
+            </bean>
+			
+			<bean name="Item">
+                <var name="itemId" type="int" ref="item"/>
+				<var name="amount" type="int"/>
+            </bean>
+			
+            <bean name="Items">
+                <var name="items" type="array:Item"/>
+            </bean>
+			
+			<bean name="RandomEquipFragmentQuality">随机品质装备
+                <var name="quality" type="cfg.item.EItemQuality"/>
+				<var name="count" type="int"/>
+            </bean>
+			
+			<bean name="WeightBonus">
+				<var name="bonus" type="Bonus"/>
+				<var name="weight" type="int"/>
+			</bean>
+			
+			<bean name="RandomBonus">
+                <var name="bonuses" type="array:Bonus"/>
+            </bean>
+			
+			<bean name="WeightRandomBonus">
+                <var name="bonuses" type="array:WeightBonus"/>
+            </bean>
+			
+			<bean name="MultiBonus">复合奖励
+				<var name="bonuses" type="array:Bonus"/>
+			</bean>
+
+            <bean name="RepeatBonus"> 执行num次生成bonus（如果bonus中含有随机内容，每次可能不同）
+                <var name="bonus" type="Bonus"/>
+                <var name="num" type="int"/>
+            </bean>
+			
+            <bean name="CopyBonus">生成一次bonus，发num次 （bonus中的随机内容每次相同）
+                <var name="bonus" type="Bonus"/>
+                <var name="num" type="int"/>
+            </bean>
+			
+        </bean>
+
+		<config name="BonusData" input="bonus.xlsx">
+			<var name="id" type="int"/>
+			<var name="desc" type="string" group="designer"/>
+            <var name="bonus" type="Bonus"/>
+		</config>
+    </module>
+</module>

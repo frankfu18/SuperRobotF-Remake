@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><module name="cfg">
+	<group name="server:client:designer:editor"/>
+
+	<include name="common.xml"/>
+	<include name="asset/asset.xml"/>
+	<include name="localize/localize_sc.xml"/>
+	<include name="sound/sound.xml"/>
+	<include name="global/global.xml"/>
+	<include name="common/common.xml"/>
+	<include name="attribute/attribute.xml"/>
+	<include name="item/item.xml"/>
+	<include name="bonus/bonus.xml"/>
+	<include name="common/condition.xml"/>
+	<include name="error/error.xml"/>
+	<include name="skill/skillRelease.xml"/>
+	<include name="skill/buff.xml"/>
+	<include name="skill/bullet.xml"/>
+	<include name="battle/battleAsset.xml"/>
+	<include name="function/function.xml"/>
+</module>
+

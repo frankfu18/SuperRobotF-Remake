@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><module name="cfg.localize">
+
+	<enum name="ELanguageType">  value需要对应SystemLanguage
+		<var alias="简体中文" name="ChineseSimplified" value="40"/>
+		<var alias="繁体中文" name="ChineseTraditional" value="41"/>
+		<var alias="英语" name="English" value="10"/>
+		<var alias="日语" name="Japanese" value="22"/>
+		<var alias="韩语" name="Korean" value="23"/>
+		<var alias="越南语" name="Vietnamese" value="39"/>
+	</enum>
+	
+	<bean name="TexLocalizeElement">
+		<bean name="TexAssetElement">图片资源
+			<var name="asset" type="string" ref="asset"/>
+			<var name="nativeSize" type="bool"/>
+		</bean>
+		
+		<bean name="TexLocalizeElements">组合元素
+			<var name="elements" type="array,TexLocalizeElement"/>
+		</bean>
+		
+		<bean name="TexPositionElement">位置信息
+			<var name="pos" type="cfg.Vector2"/>
+		</bean>
+		
+		<bean name="TexScaleElement">缩放信息
+			<var name="scale" type="cfg.Vector2"/>
+		</bean>
+		
+		<bean name="TexSizeElement">图片宽高信息
+			<var name="size" type="cfg.Vector2"/>
+		</bean>
+	</bean>
+			
+	<config name="Language" input="language.xlsx" group="client">
+		<var name="key" type="string"/>
+		<var name="chinese" type="string"/>
+		<var name="english" type="string"/>
+	</config>
+	
+	<config name="TextureLanguage" input="textureLanguage.xlsx" group="client">
+		<var name="key" type="string"/>
+		<var name="defaultEle" type="TexLocalizeElement"/>
+		<var name="localizeEleMap" type="map,ELanguageType,TexLocalizeElement"/>
+	</config>
+</module>
